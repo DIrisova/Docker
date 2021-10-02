@@ -1,0 +1,13 @@
+FROM ncat:v1.0
+
+LABEL descrip="test container"
+
+ARG DIRW=/home/maish
+
+WORKDIR ${DIRW}
+
+ADD . ${DIRW}
+
+RUN apt install -y nano && touch lookatme
+
+ENTRYPOINT ls ${DIRW}

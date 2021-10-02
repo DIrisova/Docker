@@ -1,0 +1,3 @@
+FROM ubuntu
+Run echo "Hello World" > ./world.txt
+CMD ls >> lookatme.txt && cat lookatme.txt
